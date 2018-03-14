@@ -1,0 +1,9 @@
+<%= content_for :page_actions do %>
+  <%= form_tag import_admin_products_path, method: :post, class: 'js-upload-btn', multipart: true do %>
+    <%= file_field_tag :attachment, class: 'hidden' %>
+    <%= button_tag type: :submit, class: 'btn btn-info' do %>
+      <i class='glyphicon glyphicon-import'></i>
+      <span><%= t('spree.admin.products.import.name') %></span>
+    <% end %>
+  <% end %>
+<% end %>
